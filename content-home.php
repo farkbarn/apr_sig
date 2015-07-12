@@ -1,8 +1,4 @@
-<?php
-/**
- * @package eryn
- */
-?>
+<?php ?>
 <article id="post-<?php the_ID(); ?>" <?php  post_class( 'masonry-entry'); ?>>
     <div class="inner-post">
         <header class="entry-header">
@@ -18,9 +14,9 @@
                     </a>
                 <?php endif; ?>
                 <!-- // author -->
-                <?php if(!get_theme_mod('eryn_homepage_hide_author')) : ?>
-                    <span class="author"><?php the_author_posts_link(); ?></span>
-                <?php endif; ?>
+                <?php // if(!get_theme_mod('eryn_homepage_hide_author')) : ?>
+                    <span class="author"><?php //the_author_posts_link(); ?></span>
+                <?php //endif; ?>
                 <!-- // Categories -->
                 <?php if(!get_theme_mod('eryn_homepage_hide_categories')) : ?>
                     <span class="cat-links">
