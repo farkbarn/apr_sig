@@ -1,11 +1,7 @@
-<?php
-/**
- * @package eryn
- */
-?>
+<?php ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<h2><?php _e('Sorry no results' , 'eryn'); ?></h2>
-<p><?php _e('Try changing your search criteria' , 'eryn'); ?></p>
+<h2><?php _e('ups!! no hay resultado :(' , 'eryn'); ?></h2>
+<p><?php _e('Intente usar el texto con el que buscó' , 'eryn'); ?></p>
 
     <div class="no-results">
     
