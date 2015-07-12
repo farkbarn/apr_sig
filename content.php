@@ -1,8 +1,4 @@
-<?php
-/**
- * @package eryn
- */
-?>
+<?php ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'masonry-entry'); ?>>
 
     <header class="entry-header">
@@ -26,9 +22,9 @@
                 <a href="<?php the_permalink();?>"><span class="date"><?php the_time( get_option('date_format') ); ?></span></a>
             <?php endif; ?>
             <!-- // author -->
-            <span class="author"><?php the_author_posts_link(); ?></span>
+            <span class="author"><?php // the_author_posts_link(); ?></span>
             <!-- // Categories -->
-             <span class="cat-links"><?php eryn_category(' - '); ?></span>
+             <span class="cat-links"><?php // eryn_category(' - '); ?></span>
             <!-- // Comment Count -->
             <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
                 <span class="comments-link"><?php comments_popup_link( __( '0 Comments', 'eryn' ), __( '1 Comment', 'eryn' ), __( '% Comments', 'eryn' ) ); ?></span>
@@ -83,7 +79,7 @@
                                 <div>
                                     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' ); 
                                     if ($image) : ?>
-                                        <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Read More', 'eryn'); ?></span></a>
+                                        <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Leer Más....', 'eryn'); ?></span></a>
                                         <img src="<?php echo $image[0]; ?>" alt="" />
 
                                     <?php endif; ?> 
@@ -101,7 +97,7 @@
 
         <?php
             the_content( sprintf(
-                __( '<div class="read-more"> Continue reading %s </div>', 'eryn' ), 
+                __( '<div class="read-more"> Continuar leyendo %s </div>', 'eryn' ), 
                 the_title( '<span class="screen-reader-text">"', '"</span>', false )
             ) );
         ?>

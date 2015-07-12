@@ -79,12 +79,12 @@ add_action( 'after_setup_theme', 'eryn_setup' );
  */
 function eryn_contactmethods( $contactmethods ) {
 
-	$contactmethods['twitter']   = 'Twitter Username';
-	$contactmethods['facebook']  = 'Facebook Username';
-	$contactmethods['google']    = 'Google Plus Username';
-	$contactmethods['tumblr']    = 'Tumblr Username';
-	$contactmethods['instagram'] = 'Instagram Username';
-	$contactmethods['pinterest'] = 'Pinterest Username';
+	$contactmethods['twitter']   = '#';
+	$contactmethods['facebook']  = '#';
+	$contactmethods['google']    = '#';
+	$contactmethods['tumblr']    = '#';
+	$contactmethods['instagram'] = '#';
+	$contactmethods['pinterest'] = '#';
 
 	return $contactmethods;
 }
