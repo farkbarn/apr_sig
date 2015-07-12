@@ -98,7 +98,7 @@ add_filter('user_contactmethods','eryn_contactmethods',10,1);
  */
 function eryn_widgets_init() {
     register_sidebar( array(
-		'name' => __( 'Footer 1', 'eryn' ),
+		'name' => __( 'Pie 1', 'eryn' ),
 		'id' => 'footer-1',
         'description'   => __( 'Una de dos áreas de widgets que aparecerán en la parte inferior de la página.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
@@ -107,7 +107,7 @@ function eryn_widgets_init() {
 		'after_title' => '</h4>',
 	) );
     register_sidebar( array(
-		'name' => __( 'Footer 2', 'eryn' ),
+		'name' => __( 'Pie 2', 'eryn' ),
 		'id' => 'footer-2',
         'description'   => __( 'Una de dos áreas de widgets que aparecerán en la parte inferior de la página.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
@@ -116,7 +116,7 @@ function eryn_widgets_init() {
 		'after_title' => '</h4>',        
 	) );
     register_sidebar( array(
-		'name' => __( 'Navigation Panel', 'eryn' ),
+		'name' => __( 'Panel de Navegación', 'eryn' ),
 		'id' => 'nav-bar-1',
         'description'   => __( 'Área de widgets en el panel de navegación que mostrará debajo del menú principal del sitio.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
@@ -125,7 +125,7 @@ function eryn_widgets_init() {
 		'after_title' => '</h4>',
 	) );
     register_sidebar( array(
-		'name' => __( 'Search Panel', 'eryn' ),
+		'name' => __( 'Panel de Busqueda', 'eryn' ),
 		'id' => 'search-bar-1',
         'description'   => __( 'Área de widgets en el panel de búsqueda que mostrará debajo del formulario de búsqueda del sitio.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
@@ -192,10 +192,10 @@ function eryn_category($separator) {
 		foreach((get_the_category()) as $category) {
 			if ($category->cat_ID != $excluded_cat) {
 				if ($first_time == 1) {
-					echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "eryn" ), $category->name ) . '" ' . '>'  . $category->name.'</a>';
+					echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "Mire todas las notas en %s", "eryn" ), $category->name ) . '" ' . '>'  . $category->name.'</a>';
 					$first_time = 0;
 				} else {
-					echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "eryn" ), $category->name ) . '" ' . '>' . $category->name.'</a>';
+					echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "Mire todas las notas en %s", "eryn" ), $category->name ) . '" ' . '>' . $category->name.'</a>';
 				}
 			}
 		}
@@ -205,10 +205,10 @@ function eryn_category($separator) {
 		$first_time = 1;
 		foreach((get_the_category()) as $category) {
 			if ($first_time == 1) {
-				echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "eryn" ), $category->name ) . '" ' . '>'  . $category->name.'</a>';
+				echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "Mire todas las notas en %s", "eryn" ), $category->name ) . '" ' . '>'  . $category->name.'</a>';
 				$first_time = 0;
 			} else {
-				echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "eryn" ), $category->name ) . '" ' . '>' . $category->name.'</a>';
+				echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "Mire todas las notas en %s", "eryn" ), $category->name ) . '" ' . '>' . $category->name.'</a>';
 			}
 		}
 	

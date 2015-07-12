@@ -27,7 +27,7 @@
              <span class="cat-links"><?php // eryn_category(' - '); ?></span>
             <!-- // Comment Count -->
             <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-                <span class="comments-link"><?php comments_popup_link( __( '0 Comments', 'eryn' ), __( '1 Comment', 'eryn' ), __( '% Comments', 'eryn' ) ); ?></span>
+                <span class="comments-link"><?php comments_popup_link( __( '0 Comentarios', 'eryn' ), __( '1 Comentarios', 'eryn' ), __( '% Comentarios', 'eryn' ) ); ?></span>
             <?php endif; ?>
         </div><!-- / .meta-data -->
 
