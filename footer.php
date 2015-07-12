@@ -1,12 +1,3 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package eryn
- */
-?>
             </div><!-- .content-wrap -->
         </div><!-- .site-content -->
 
@@ -44,11 +35,11 @@
                         <p><?php echo $copyright;  ?></p>
                     <?php else: ?>
                     <?php
-                        $link    = 'http://templateexpress.com';
-                        $company = 'Template Express';
+                        $link    = 'http://farkbarn.com.ve';
+                        $company = 'farkbarn';
                         $year    = date('Y'); 
                         $copyrightString = sprintf(
-                            __( '<p><a href="%1$s">Eryn - Theme developed by %2$s &copy %3$d</a></p>', 'eryn' ),
+                            __( '<p><a href="%1$s">Aprendizaje Significativo - Tema desarrollado por %2$s &copy %3$d</a></p>', 'apr_sig' ),
                             $link,
                             $company,
                             $year
@@ -59,9 +50,6 @@
                 </div><!-- .content-wrap -->
             </div><!-- .site-copyright -->
         <?php endif; ?>
-
-
         <?php wp_footer(); ?>
-
 	</body>
 </html>

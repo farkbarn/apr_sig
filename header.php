@@ -4,9 +4,9 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package eryn
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -25,8 +25,6 @@
 
 <?php wp_head(); ?>
 </head>
-    
-    
 
 <body id="top" <?php body_class(); ?>>
     <header id="masthead" class="site-header" role="banner">        
