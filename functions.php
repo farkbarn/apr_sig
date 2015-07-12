@@ -100,7 +100,7 @@ function eryn_widgets_init() {
     register_sidebar( array(
 		'name' => __( 'Footer 1', 'eryn' ),
 		'id' => 'footer-1',
-        'description'   => __( 'One of two widget areas that will apear at the bottom of the site.', 'eryn' ),
+        'description'   => __( 'Una de dos áreas de widgets que aparecerán en la parte inferior de la página.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
 		'after_widget' => '</div></aside>',
 		'before_title' => '<h4 class="widget-title">',
@@ -109,7 +109,7 @@ function eryn_widgets_init() {
     register_sidebar( array(
 		'name' => __( 'Footer 2', 'eryn' ),
 		'id' => 'footer-2',
-        'description'   => __( 'One of two widget areas that will apear at the bottom of the site.', 'eryn' ),
+        'description'   => __( 'Una de dos áreas de widgets que aparecerán en la parte inferior de la página.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
 		'after_widget' => '</div></aside>',
 		'before_title' => '<h4 class="widget-title">',
@@ -118,7 +118,7 @@ function eryn_widgets_init() {
     register_sidebar( array(
 		'name' => __( 'Navigation Panel', 'eryn' ),
 		'id' => 'nav-bar-1',
-        'description'   => __( 'Widget area within the navigation panel that will display below the site primary menu.', 'eryn' ),
+        'description'   => __( 'Área de widgets en el panel de navegación que mostrará debajo del menú principal del sitio.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
 		'after_widget' => '</div></aside>',
 		'before_title' => '<h4 class="widget-title">',
@@ -127,7 +127,7 @@ function eryn_widgets_init() {
     register_sidebar( array(
 		'name' => __( 'Search Panel', 'eryn' ),
 		'id' => 'search-bar-1',
-        'description'   => __( 'Widget area within the search panel that will display below the site search form.', 'eryn' ),
+        'description'   => __( 'Área de widgets en el panel de búsqueda que mostrará debajo del formulario de búsqueda del sitio.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
 		'after_widget' => '</div></aside>',
 		'before_title' => '<h4 class="widget-title">',
