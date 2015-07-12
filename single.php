@@ -1,8 +1,7 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * modelo para mostrar todas las notas solas.
  *
- * @package eryn
  */
 
 get_header(); ?>
