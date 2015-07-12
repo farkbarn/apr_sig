@@ -14,9 +14,9 @@
                     </a>
                 <?php endif; ?>
                 <!-- // author -->
-                <?php // if(!get_theme_mod('eryn_homepage_hide_author')) : ?>
-                    <span class="author"><?php //the_author_posts_link(); ?></span>
-                <?php //endif; ?>
+                <?php  if(!get_theme_mod('eryn_homepage_hide_author')) : ?>
+                    <span class="author"><?php the_author_posts_link(); ?></span>
+                <?php endif; ?>
                 <!-- // Categories -->
                 <?php if(!get_theme_mod('eryn_homepage_hide_categories')) : ?>
                     <span class="cat-links">
@@ -26,12 +26,12 @@
                 <!-- // Comment Count -->
                 <?php if(!get_theme_mod('eryn_homepage_hide_comment_count')) : ?>
                     <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-                        <span class="comments-link"><?php comments_popup_link( __( '0 Comments', 'eryn' ), __( '1 Comment', 'eryn' ), __( '% Comments', 'eryn' ) ); ?></span>
+                        <span class="comments-link"><?php comments_popup_link( __( '0 Comentarios', 'eryn' ), __( '1 Comentarios', 'eryn' ), __( '% Comentarios', 'eryn' ) ); ?></span>
                     <?php endif; ?>
                 <?php endif; ?>
                 <?php if(!get_theme_mod('eryn_homepage_hide_featured')): ?>
                     <?php if(is_sticky($post->ID)):?>
-                        <span class="sticky-icon"><span class="sticky-text"><?php _e('Featured', 'eryn'); ?> </span><i class="fa fa-thumb-tack"></i></span>
+                        <span class="sticky-icon"><span class="sticky-text"><?php _e('Destacados', 'eryn'); ?> </span><i class="fa fa-thumb-tack"></i></span>
                     <?php endif; ?>
                 <?php endif; ?>
             </div><!-- / .meta-data -->
@@ -47,7 +47,7 @@
                             <div>
                                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' ); 
                                 if ($image) : ?>
-                                    <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Read More', 'eryn'); ?></span></a>
+                                    <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Leer Más....', 'eryn'); ?></span></a>
                                     <img src="<?php echo $image[0]; ?>" alt="" />
 
                                 <?php endif; ?> 
@@ -65,7 +65,7 @@
             <?php
                 /* translators: %s: Name of current post */
                 the_content( sprintf(
-                    __( '<div class="read-more"> Continue reading... %s</div>', 'eryn' ), 
+                    __( '<div class="read-more"> Continuar leyendo... %s</div>', 'eryn' ), 
                     the_title( '<span class="screen-reader-text">"', '"</span>', false )
                 ) );
             ?>
