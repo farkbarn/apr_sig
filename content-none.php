@@ -1,7 +1,7 @@
 <?php ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <h2><?php _e('ups!! no hay resultado :(' , 'eryn'); ?></h2>
-<p><?php _e('Intente usar el texto con el que buscó' , 'eryn'); ?></p>
+<p><?php _e('Intente buscar otro tema' , 'eryn'); ?></p>
 
     <div class="no-results">
     
