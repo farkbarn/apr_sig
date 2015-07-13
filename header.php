@@ -138,15 +138,13 @@
                     <?php if ( is_active_sidebar( 'nav-bar-1' ) && dynamic_sidebar('nav-bar-1') ) : else : ?>
                     <?php endif; ?>
                 </div>
-
             </div><!-- .breathing-space -->
         </aside>
         <div class="search-panel transition">
             <div class="breathing-space">
                 <div class="search-container">
-                    <h3 class="site-search"><?php _e('Search', 'Eryn'); ?></h3>
+                    <h3 class="site-search"><?php _e('Buscar', 'Eryn'); ?></h3>
                     <h4 class="search-help"><?php _e('Type your search keyword, and press enter', 'Eryn'); ?></h4>
-
                     <div class="search-box">
                         <div class="inner">
                             <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">

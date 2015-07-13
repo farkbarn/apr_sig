@@ -664,11 +664,11 @@ msgstr ""
 
 #: ../header.php:163
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: ../header.php:164
 msgid "Type your search keyword, and press enter"
-msgstr ""
+msgstr "Ingrese la palabra a buscar, y presione enter"
 
 #: ../header.php:170
 msgid "Search for then press enter"
