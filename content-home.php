@@ -24,15 +24,15 @@
                 <!-- // Categories -->
                 <?php if(!get_theme_mod('eryn_homepage_hide_categories')) : ?>
                     <span class="cat-links">
-                        <span><?php eryn_category(' - '); ?></span>											
+                        <span><?php eryn_category(' - '); ?></span>
                     </span>
                 <?php endif;?>
                 <!-- // Comment Count -->
-                <?php if(!get_theme_mod('eryn_homepage_hide_comment_count')) : ?>
-                    <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-                        <span class="comments-link"><?php comments_popup_link( __( '0 Comments', 'eryn' ), __( '1 Comment', 'eryn' ), __( '% Comments', 'eryn' ) ); ?></span>
-                    <?php endif; ?>
-                <?php endif; ?>
+<!-- <?php if(!get_theme_mod('eryn_homepage_hide_comment_count')) : ?>
+    <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+        <span class="comments-link"><?php comments_popup_link( __( '0 Comments', 'eryn' ), __( '1 Comment', 'eryn' ), __( '% Comments', 'eryn' ) ); ?></span>
+    <?php endif; ?>
+<?php endif; ?> -->
                 <?php if(!get_theme_mod('eryn_homepage_hide_featured')): ?>
                     <?php if(is_sticky($post->ID)):?>
                         <span class="sticky-icon"><span class="sticky-text"><?php _e('Featured', 'eryn'); ?> </span><i class="fa fa-thumb-tack"></i></span>
@@ -41,7 +41,7 @@
             </div><!-- / .meta-data -->
         </header>
 
-        <div class="entry-content <?php if(is_single()):echo 'single-post';endif;?>">		
+        <div class="entry-content <?php if(is_single()):echo 'single-post';endif;?>">
 
 
             <?php if(has_post_thumbnail()) : ?>
@@ -49,12 +49,12 @@
                     <div class="post-image">
                         <figure>
                             <div>
-                                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' ); 
+                                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
                                 if ($image) : ?>
                                     <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Read More', 'eryn'); ?></span></a>
                                     <img src="<?php echo $image[0]; ?>" alt="" />
 
-                                <?php endif; ?> 
+                                <?php endif; ?>
                             </div>
                             <?php if(get_post(get_post_thumbnail_id())->post_excerpt): ?>
                                 <figcaption>
@@ -69,13 +69,11 @@
             <?php
                 /* translators: %s: Name of current post */
                 the_content( sprintf(
-                    __( '<div class="read-more"> Continue reading... %s</div>', 'eryn' ), 
+                    __( '<div class="read-more"> Continue reading... %s</div>', 'eryn' ),
                     the_title( '<span class="screen-reader-text">"', '"</span>', false )
                 ) );
             ?>
 
         </div><!-- .entry-content -->
     </div><!-- .post-wrap -->
-</article><!-- #post-## -->		
-
-
+</article><!-- #post-## -->
