@@ -37,8 +37,7 @@
             </div><!-- / .meta-data -->
         </header>
 
-        <div class="entry-content <?php if(is_single()):echo 'single-post';endif;?>">		
-
+        <div class="entry-content <?php if(is_single()):echo 'post_excerpt';endif;?>">		
             <?php if(has_post_thumbnail()) : ?>
                 <?php if(!get_theme_mod('eryn_hide_post_featured')) : ?>
                     <div class="post-image">
