@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $categories = get_the_category($post->ID);
 
@@ -7,7 +7,7 @@ if ($categories) {
 	$category_ids = array();
 
 	foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
-	
+
 	$args = array(
 		'category__in'     => $category_ids,
 		'post__not_in'     => array($post->ID),
@@ -18,16 +18,16 @@ if ($categories) {
 
 	$my_query = new wp_query( $args );
 	if( $my_query->have_posts() ) { ?>
-	
+
 		<div class="post-related">
 			<div class="post-box">
-				<h4 class="post-box-title"><?php _e('Related Posts', 'eryn'); ?></h4>
+				<h4 class="post-box-title"><?php _e('Publicaciones relacionadas', 'eryn'); ?></h4>
 			</div>
-		<?php 
+		<?php
 			$count = 1;
 			while( $my_query->have_posts() ) {
 			$my_query->the_post();?>
-	
+
 			<div class="item-related <?php echo('col'.$count); ?>">
 				<div class="related-wrap">
                 	<div class="rel-image-wrap">

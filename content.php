@@ -95,7 +95,7 @@
 
         <?php
             the_content( sprintf(
-                __( '<div class="read-more"> Continue reading %s </div>', 'eryn' ),
+                __( '<div class="read-more"> Contnuar Leyendo %s </div>', 'eryn' ),
                 the_title( '<span class="screen-reader-text">"', '"</span>', false )
             ) );
         ?>
