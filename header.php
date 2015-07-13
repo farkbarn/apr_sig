@@ -1,12 +1,12 @@
 <?php
 /**
- * el header del tema
+ * The header for our theme.
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
+ * @package eryn
  */
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -25,6 +25,8 @@
 
 <?php wp_head(); ?>
 </head>
+    
+    
 
 <body id="top" <?php body_class(); ?>>
     <header id="masthead" class="site-header" role="banner">        
@@ -158,15 +160,15 @@
         <div class="search-panel transition">
             <div class="breathing-space">
                 <div class="search-container">
-                    <h3 class="site-search"><?php _e('Buscar', 'Eryn'); ?></h3>
-                    <h4 class="search-help"><?php _e('Escriba el tema a buscar, y presione enter', 'Eryn'); ?></h4>
+                    <h3 class="site-search"><?php _e('Search', 'Eryn'); ?></h3>
+                    <h4 class="search-help"><?php _e('Type your search keyword, and press enter', 'Eryn'); ?></h4>
 
                     <div class="search-box">
                         <div class="inner">
                             <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                                 <label>
-                                    <span class="screen-reader-text"><?php _e('Para buscar precione enter', 'Eryn'); ?></span>
-                                    <input type="search" class="search-field" placeholder="<?php _e('Buscar...', 'Eryn'); ?>" value="" name="s" title="Search for:">
+                                    <span class="screen-reader-text"><?php _e('Search for then press enter', 'Eryn'); ?></span>
+                                    <input type="search" class="search-field" placeholder="<?php _e('Search...', 'Eryn'); ?>" value="" name="s" title="Search for:">
 
                                 </label>
                             </form>

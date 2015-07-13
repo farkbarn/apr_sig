@@ -1,7 +1,8 @@
 <?php
 /**
- * modelo para mostrar en el contenido de la página "page.php"
+ * The template used for displaying page content in page.php
  *
+ * @package eryn
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

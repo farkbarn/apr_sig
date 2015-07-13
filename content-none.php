@@ -1,7 +1,11 @@
-<?php ?>
+<?php
+/**
+ * @package eryn
+ */
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<h2><?php _e('ups!! no hay resultado :(' , 'eryn'); ?></h2>
-<p><?php _e('Intente buscar otro tema' , 'eryn'); ?></p>
+<h2><?php _e('Sorry no results' , 'eryn'); ?></h2>
+<p><?php _e('Try changing your search criteria' , 'eryn'); ?></p>
 
     <div class="no-results">
     
