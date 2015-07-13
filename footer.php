@@ -5,14 +5,14 @@
             <div class="footer-widgets">
                 <div class="content-wrap">
                     <div class="foot-widget">
-                        <?php if ( is_active_sidebar( 'footer-1' ) && dynamic_sidebar('footer-1') ) : else : ?>
+                        <?php if ( is_active_sidebar( 'footer-1' ) && dynamic_sidebar('pie 1') ) : else : ?>
                         <?php endif; ?>
                     </div>
                     <div class="foot-widget">
-                        <?php if ( is_active_sidebar( 'footer-2' ) && dynamic_sidebar('footer-2') ) : else : ?>
+                        <?php if ( is_active_sidebar( 'footer-2' ) && dynamic_sidebar('pie 2') ) : else : ?>
                         <?php endif; ?>
                     </div>
-                    
+
             	</div><!-- .content-wrap -->
             </div><!-- .footer-widgets -->
         <?php endif; ?>
@@ -20,7 +20,7 @@
         <?php if (!get_theme_mod('eryn_hide_copyright_bar')): ?>
             <div class="site-copyright" role="contentinfo">
                 <div class="content-wrap">
-                    <?php 
+                    <?php
                         $allowedTags = array(
                             'a' => array(
                                 'href' => array(),
@@ -37,7 +37,7 @@
                     <?php
                         $link    = 'http://farkbarn.com.ve';
                         $company = 'farkbarn';
-                        $year    = date('Y'); 
+                        $year    = date('Y');
                         $copyrightString = sprintf(
                             __( '<p><a href="%1$s">Aprendizaje Significativo - Tema desarrollado por %2$s &copy %3$d</a></p>', 'apr_sig' ),
                             $link,
