@@ -69,7 +69,7 @@
             <?php
                 /* translators: %s: Name of current post */
                 the_content( sprintf(
-                    __( '<div class="read-more"> Contiguar Leyendo... %s</div>', 'eryn' ),
+                    __( '<div class="read-more">Contiguar Leyendo... %s</div>', 'eryn' ),
                     the_title( '<span class="screen-reader-text">"', '"</span>', false )
                 ) );
             ?>
