@@ -1,4 +1,4 @@
-<?php echo 'esto';?>
+<?php ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'masonry-entry'); ?>>
     <div class="inner-post">
         <header class="entry-header">
@@ -38,7 +38,6 @@
         </header>
 
         <div class="entry-content <?php if(is_single()):echo 'single-post';endif;?>">		
-
 
             <?php if(has_post_thumbnail()) : ?>
                 <?php if(!get_theme_mod('eryn_hide_post_featured')) : ?>
