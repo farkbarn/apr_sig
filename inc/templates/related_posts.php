@@ -1,13 +1,8 @@
-<?php
-
-$categories = get_the_category($post->ID);
+<?php $categories = get_the_category($post->ID);
 
 if ($categories) {
-
 	$category_ids = array();
-
 	foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
-
 	$args = array(
 		'category__in'     => $category_ids,
 		'post__not_in'     => array($post->ID),
@@ -50,5 +45,4 @@ if ($categories) {
 	}
 }
 wp_reset_query();
-
 ?>
