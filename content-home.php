@@ -37,7 +37,7 @@
             </div><!-- / .meta-data -->
         </header>
 
-        <div class="entry-content <?php if(is_single()):echo 'post_excerpt';endif;?>">		
+        <div class="entry-content <?php if(is_single()):echo 'single-post';endif;?>">		
             <?php if(has_post_thumbnail()) : ?>
                 <?php if(!get_theme_mod('eryn_hide_post_featured')) : ?>
                     <div class="post-image">
@@ -45,12 +45,10 @@
                             <div>
                                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' ); 
                                 if ($image) : ?>
-                                    <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Leer Más....', 'eryn'); ?></span></a>
+                                    <a href="<?php the_permalink(); ?>" class="overlay"><span><?php _e('Leer Más....', 'eryn'); ?></span></a>
                                     <img src="<?php echo $image[0]; ?>" alt="" />
-
-                                <?php endif; ?> 
                             </div>
-                            <?php if(get_post(get_post_thumbnail_id())->post_excerpt): ?>
+                            <?php if(get_post(get_post_thumbnail_id())->post_excerpt()): ?>
                                 <figcaption>
                                     <?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
                                 </figcaption>
