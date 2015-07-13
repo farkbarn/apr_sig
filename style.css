@@ -216,27 +216,27 @@ h6 {
 	clear: both;
 }
 
-h1 a, 
-h2 a, 
-h3 a, 
+h1 a,
+h2 a,
+h3 a,
 h4 a,
-article .post-title, 
-article .post-title a, 
-.sidebar .widget-title, 
+article .post-title,
+article .post-title a,
+.sidebar .widget-title,
 .nav-links a,
-.read-more a, 
-.post-wrap > blockquote p, 
+.read-more a,
+.post-wrap > blockquote p,
 .post-wrap > blockquote p a,
-h1 a:visited, 
-h2 a:visited, 
-h3 a:visited, 
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
 h4 a:visited,
-article .post-title:visited, 
-article .post-title a:visited, 
+article .post-title:visited,
+article .post-title a:visited,
 .sidebar .widget-title:visited,
-.nav-links a:visited, 
+.nav-links a:visited,
 .read-more a:visited,
-.post-wrap > blockquote p, 
+.post-wrap > blockquote p,
 .post-wrap > blockquote p a:visited,
 .tagcloud a {
 	color:#2b2b2b;
@@ -244,15 +244,15 @@ article .post-title a:visited,
 h1.site-title a {
 	color:#fff;
 }
-h1 a:hover, 
-h2 a:hover, 
-h3 a:hover, 
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
 h4 a:hover,
-article a:hover, 
-article a:focus, 
-.post-title a:hover, 
-.post-title a:focus, 
-.sidebar a:hover, 
+article a:hover,
+article a:focus,
+.post-title a:hover,
+.post-title a:focus,
+.sidebar a:hover,
 .sidebar a:focus,
 .nav-links a:hover,
 .read-more a:hover,
@@ -263,7 +263,7 @@ article a:focus,
 	color: #db971a;
 }
 .fa,
-blockquote:before, 
+blockquote:before,
 cite:before,
 .post-format:before,
 .date:before,
@@ -273,14 +273,14 @@ cite:before,
 .edit-link a:before,
 .sidebar .search-form label:before,
 .comment-reply-link:before{
-    font-family:fontawesome; 
-    font-style:normal; 
-    font-weight:400; 
-    speak:none; 
-    display:inline-block; 
-    text-decoration:inherit; 
-    text-align:center; 
-    font-variant:normal; 
+    font-family:fontawesome;
+    font-style:normal;
+    font-weight:400;
+    speak:none;
+    display:inline-block;
+    text-decoration:inherit;
+    text-align:center;
+    font-variant:normal;
     text-transform:none;
 }
 .meta-data,
@@ -415,24 +415,24 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 table {
-	font-size: .925em; 
-	margin: 1em 0 3em 0; 
+	font-size: .925em;
+	margin: 1em 0 3em 0;
 	text-align: center;
 }
 
 th {
-	padding: .8em 0; 
-	font-weight: 800; 
-	line-height: 1.2; 
-	border-bottom: 2px solid #555; 
-	border-top: 2px solid #555; 
-	text-transform: uppercase; 
+	padding: .8em 0;
+	font-weight: 800;
+	line-height: 1.2;
+	border-bottom: 2px solid #555;
+	border-top: 2px solid #555;
+	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 
 td {
-	color: #777; 
-	padding: .8em 0; 
+	color: #777;
+	padding: .8em 0;
 	border-bottom: 1px solid #eee;
 }
 
@@ -750,7 +750,7 @@ a:active
     top: 0;
     left: 0;
     overflow: hidden;
-    
+
 }
 .page-background{
     text-align: center;
@@ -797,7 +797,7 @@ a:active
 	transition: opacity 1s ease-in-out;
 }
 .page-background-image img {
-	max-width: none;	
+	max-width: none;
 }
 .page-background-image.loaded.active {
 	z-index: 1;
@@ -808,8 +808,8 @@ a:active
 .site-navigation{
     float: left;
     position: fixed;
-    width: 70px;
-    left: 35%;
+    width: 43px;
+    left: 37%;
     bottom: 0;
     top:0;
     background: #1b1b1b;
@@ -834,7 +834,7 @@ a:active
 	display: block;
     color: #fff;
 }
-.site-navigation a:hover, 
+.site-navigation a:hover,
 .site-navigation a:focus{
     background-color: #db971a;
     color: #fff;
@@ -890,7 +890,7 @@ a:active
     z-index: 2;
     min-height: 100%;
 }
-.site-secondary, 
+.site-secondary,
 .search-panel {
     position: fixed;
     width: 35%;
@@ -937,15 +937,15 @@ input[type="search"]..search-field:focus{
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #666; 
+   color: #666;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #666;  
+   color: #666;
 }
 
-:-ms-input-placeholder {  
-   color: #666;  
+:-ms-input-placeholder {
+   color: #666;
 }
 
 .title-wrap{
@@ -1091,7 +1091,7 @@ border-bottom: 1px solid #efefef;
 .post-image img{
     display: inline-block;
 }
-.post-image .overlay, 
+.post-image .overlay,
 .single .post-image:hover .overlay,
 .related-wrap .overlay{
     opacity: 0;
@@ -1209,7 +1209,7 @@ border-bottom: 1px solid #efefef;
 	width:47%;
 	text-align: left;
 }
-.nav-links a, 
+.nav-links a,
 .read-more a {
 	display:inline-block;
 	padding:4px 8px;
@@ -1225,7 +1225,7 @@ border-bottom: 1px solid #efefef;
 	text-align:center;
 }
 
-.post-image .overlay, 
+.post-image .overlay,
 .single .post-image:hover .overlay,
 .related-wrap .overlay{
     opacity: 0;
@@ -1346,7 +1346,7 @@ border-bottom: 1px solid #efefef;
 /* Author Box
 ================================================== */
 .author-info { margin: 0 -80px; padding: 60px 80px; }
-.author-info .heading, 
+.author-info .heading,
 .post-box-title { font-size: 1.429em;
  margin: 0 0 12px;
 border-bottom: 1px solid #eee;
@@ -1359,7 +1359,7 @@ border: 0; padding: 0; }
 .author-info p:last-child { margin: 0; }
 
 
-/* No -results Search page 
+/* No -results Search page
 ==================================================== */
 .no-results h3{
 	margin-top:2em;
@@ -1426,7 +1426,7 @@ border: 0; padding: 0; }
 	text-align: center;
 	padding: 2em 0 0;
 	clear: both;
-	border-top: 1px solid #efefef;	
+	border-top: 1px solid #efefef;
 }
 */
 
@@ -1460,7 +1460,7 @@ border: 0; padding: 0; }
 .comment-list{
     margin:2em 0;
 }
- 
+
 .comment-list ol{
     margin-left: 3em;
 }
@@ -1630,7 +1630,7 @@ object {
 	}
     .site-header{
         display: none;
-    } 
+    }
     .site-navigation{
         left: 0;
     }
@@ -1643,7 +1643,7 @@ object {
         width: 75%;
         left: -75%;
     }
-	.site-secondary, 
+	.site-secondary,
 	.search-panel{
 		width:75%;
 		left: 70px;
@@ -1651,7 +1651,7 @@ object {
 		transform:translateX(-100%);
 		overflow:hidden;
 	}
-	.nav-expanded .site-secondary, 
+	.nav-expanded .site-secondary,
 	.search-expanded .search-panel{
         -webkit-transform: translateX(0%);
 		transform: translateX(0%);
@@ -1700,7 +1700,7 @@ object {
         transform: translateX(0);
         display:block;
     }
-    .site-secondary, 
+    .site-secondary,
     .search-panel{
 		width: 80%;
 		margin-left:-20px;
@@ -1727,7 +1727,7 @@ object {
         width:100%;
         float:none;
     }
-    .nav-links a, 
+    .nav-links a,
     .read-more a{
         font-size:0.8em;
     }
