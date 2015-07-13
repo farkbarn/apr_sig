@@ -1,35 +1,21 @@
-<?php
-/**
- * The header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package eryn
- */
-?><!DOCTYPE html>
+<?php ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <?php if(get_theme_mod('eryn_global_favicon')) : ?>
 	<link rel="shortcut icon" href="<?php echo esc_url(get_theme_mod('eryn_global_favicon')); ?>" />
 <?php endif; ?>
-
 <?php if(get_theme_mod('eryn_global_apple_icon')) : ?>
 	<link rel="apple-touch-icon" href="<?php echo esc_url(get_theme_mod('eryn_global_apple_icon')); ?>">
 <?php endif; ?>
-
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php esc_url(bloginfo( 'pingback_url' )); ?>">
-
 <?php wp_head(); ?>
 </head>
-    
-    
 
 <body id="top" <?php body_class(); ?>>
-    <header id="masthead" class="site-header" role="banner">        
+    <header id="masthead" class="site-header" role="banner">
         <div class="featured-image">
             <div id="page-background" class="page-background">
                 <svg class="page-background-loader" width="70" height="20">
@@ -43,7 +29,7 @@
                         <animate attributeName="r" from="0" to="10" values="0;10;10;10;0" begin="400ms" dur="1000ms" repeatCount="indefinite"/>
                     </circle>
                 </svg>
-                <div id="page-background-image-default" class="page-background-image active">    
+                <div id="page-background-image-default" class="page-background-image active">
                     <?php if(get_theme_mod('eryn_logo')): ?>
                         <div class="site-logo">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr(bloginfo( 'name' )); ?>">
@@ -61,9 +47,8 @@
                             <h2><span class="tagline"><?php bloginfo( 'description' ); ?></span></h2>
                         </div>
                     <?php endif; ?>
-                    
                     <?php if(is_single() && has_post_thumbnail() || is_page() && has_post_thumbnail()) : ?>
-                       <?php    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' ); 
+                       <?php    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
                                 $thumb_id = get_post_thumbnail_id( $post->ID );
                                 $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                         if ($image) : ?>
@@ -77,9 +62,8 @@
                 </div>
             </div>
         </div><!-- .featured-image -->
-        
     </header>
-    
+
     <nav class="site-navigation">
         <ul class="list-unstyled">
             <li>
@@ -90,7 +74,7 @@
             <li>
                 <a class="nav-search-btn transition" href="#" data-type="inline">
                     <i class="fa fa-search"></i>
-                </a>			
+                </a>
             </li>
             <?php
                 if(!get_theme_mod('eryn_navbar_social_check')) :
@@ -125,7 +109,7 @@
                         <?php endif; ?>
 
                     <?php else : ?>
-                    
+
                         <?php if(!get_theme_mod('hide_site_title')): ?>
                             <h2 class="site-title">
                                 <a href="<?php echo home_url(); ?>">
@@ -133,28 +117,28 @@
                                 </a>
                             </h2>
                         <?php endif; ?>
-                    
+
                         <?php if(!get_theme_mod('hide_tagline')): ?>
                             <h3 class="site-description">
                                 <span class="tagline"><?php bloginfo( 'description' ); ?></span>
                             </h3>
                         <?php endif; ?>
-                    
+
                     <?php endif; ?>
                 </div><!-- .title-wrap -->
 
                 <nav id="site-navigation" class="main-navigation" role="navigation">
-                    <?php wp_nav_menu( array( 
-                        'theme_location' => 'primary', 
-                         ) 
-                      ); 
+                    <?php wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                         )
+                      );
                     ?>
                 </nav><!-- #site-navigation -->
                 <div class="panel-widget">
                     <?php if ( is_active_sidebar( 'nav-bar-1' ) && dynamic_sidebar('nav-bar-1') ) : else : ?>
                     <?php endif; ?>
                 </div>
-                                
+
             </div><!-- .breathing-space -->
         </aside>
         <div class="search-panel transition">
@@ -175,7 +159,7 @@
                         </div><!-- .inner -->
                     </div><!-- .search-box -->
                 </div><!-- .search-container -->
-                
+
                 <div class="panel-widget">
                     <?php if ( is_active_sidebar( 'search-bar-1' ) && dynamic_sidebar('search-bar-1') ) : else : ?>
                     <?php endif; ?>
@@ -183,7 +167,7 @@
             </div>
         </div><!-- .search-panel -->
     </div><!-- .slide-panels -->
-    
+
 
     <div id="content" class="site-content">
 		<?php if(get_theme_mod('eryn_logo_small_screen')): ?>
