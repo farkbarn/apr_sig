@@ -1,8 +1,8 @@
 <div class="author-info clr">
     <?php if(! is_author()): ?>
-	   <h4 class="heading"><?php _e('About the Author ', 'eryn'); ?></h4>
+	   <h4 class="heading"><?php _e('Sobre el Autor ', 'eryn'); ?></h4>
     <?php else: ?>
-        <h2 class=""><?php _e('About the Author ', 'eryn'); ?></h2>
+        <h2 class=""><?php _e('Sobre el Autor ', 'eryn'); ?></h2>
     <?php endif; ?>
 	<div class="author-info-inner clr">
         <div class="author-avatar clr">
