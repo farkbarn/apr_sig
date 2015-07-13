@@ -15,10 +15,6 @@
 if (true) {
 	echo "esto es una prueba";
 } else {
-	# code...
-}
-
-
 
 
 if ( post_password_required() ) {
@@ -76,3 +72,5 @@ if ( post_password_required() ) {
         <?php comment_form(); ?>
 	</div>
 </div><!-- #comments -->
+
+<<?php } ?>
