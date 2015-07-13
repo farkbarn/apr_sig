@@ -160,8 +160,8 @@
         <div class="search-panel transition">
             <div class="breathing-space">
                 <div class="search-container">
-                    <h3 class="site-search"><?php _e('Search', 'es'); ?></h3>
-                    <h4 class="search-help"><?php _e('Type your search keyword, and press enter', 'es'); ?></h4>
+                    <h3 class="site-search"><?php _e('Search', 'farkbarn'); ?></h3>
+                    <h4 class="search-help"><?php _e('Type your search keyword, and press enter', 'farkbarn'); ?></h4>
 
                     <div class="search-box">
                         <div class="inner">
