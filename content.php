@@ -1,6 +1,12 @@
-<?php ?>
+<?php
+/**
+ * @package eryn
+ */
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'masonry-entry'); ?>>
+
     <header class="entry-header">
+        
         <!-- // Post Title & Category -->
         <?php if(is_single()): ?>
             <h1 class="post-title ee">
@@ -24,14 +30,14 @@
             <!-- // Categories -->
              <span class="cat-links"><?php eryn_category(' - '); ?></span>
             <!-- // Comment Count -->
-            <?php /*if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-                <!-- <span class="comments-link"><?php //comments_popup_link( __( '0 Comments', 'eryn' ), __( '1 Comment', 'eryn' ), __( '% Comments', 'eryn' ) ); ?></span> -->
-            <?php endif; */?>
+            <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+                <span class="comments-link"><?php comments_popup_link( __( '0 Comments', 'eryn' ), __( '1 Comment', 'eryn' ), __( '% Comments', 'eryn' ) ); ?></span>
+            <?php endif; ?>
         </div><!-- / .meta-data -->
 
     </header><!--/ .entry-header -->
 
-    <div class="entry-content <?php if(is_single()):echo 'single-post';endif;?>">
+    <div class="entry-content <?php if(is_single()):echo 'single-post';endif;?>">		
          <!-- Featured Media Section-->
             <?php if(has_post_format('gallery')) : ?>
 
@@ -75,12 +81,12 @@
                         <div class="post-image featured-image">
                             <figure>
                                 <div>
-                                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
+                                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' ); 
                                     if ($image) : ?>
                                         <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Read More', 'eryn'); ?></span></a>
                                         <img src="<?php echo $image[0]; ?>" alt="" />
 
-                                    <?php endif; ?>
+                                    <?php endif; ?> 
                                 </div>
                                 <?php if(get_post(get_post_thumbnail_id())->post_excerpt): ?>
                                     <figcaption>
@@ -95,19 +101,19 @@
 
         <?php
             the_content( sprintf(
-                __( '<div class="read-more"> Continuar Leyendo %s </div>', 'eryn' ),
+                __( '<div class="read-more"> Continue reading %s </div>', 'eryn' ), 
                 the_title( '<span class="screen-reader-text">"', '"</span>', false )
             ) );
         ?>
-
+        
 		<?php wp_link_pages(); ?>
-
+        
         <?php edit_post_link( __( 'Edit', 'eryn' ), '<span class="edit-link">', '</span>' ); ?>
-
-
+                    
+        
         <?php if(is_single()) : ?>
             <div class="post-tags">
-                <?php the_tags('<span class="fa fa-tag"></span> ', ' <span class="tag-divider">&bull;</span> '); ?>
+                <?php the_tags('<span class="fa fa-tag"></span> ', ' <span class="tag-divider">&bull;</span> '); ?> 
             </div>
         <?php endif; ?>
 
@@ -136,4 +142,6 @@
 
     <?php endif;?>
 
-</article><!-- #post-## -->
+</article><!-- #post-## -->		
+
+

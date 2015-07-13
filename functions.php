@@ -32,7 +32,7 @@ function eryn_setup() {
 
 	// Feed Links
 	add_theme_support( 'automatic-feed-links' );
-
+	
 	// Post formats
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'gallery') );
 
@@ -55,21 +55,21 @@ function eryn_setup() {
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
-
+    
 	// Display Title in theme
 	add_theme_support( 'title-tag' );
-
+    
     // Custom Backgrounds Support
     $args = array(
 	   'default-color' => 'FFFFFF',
     );
     add_theme_support( 'custom-background', $args );
-
+    
     // link a custom stylesheet file to the TinyMCE visual editor
     $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Droid+Serif' );
 	add_editor_style( array('style.css', 'css/editor-style.css', $font_url) );
-
-
+    
+    
 }
 endif; // eryn_setup
 add_action( 'after_setup_theme', 'eryn_setup' );
@@ -79,7 +79,7 @@ add_action( 'after_setup_theme', 'eryn_setup' );
  */
 function eryn_contactmethods( $contactmethods ) {
 
-	$contactmethods['twitter']   = '@farkbarn';
+	$contactmethods['twitter']   = 'Twitter Username';
 	$contactmethods['facebook']  = 'Facebook Username';
 	$contactmethods['google']    = 'Google Plus Username';
 	$contactmethods['tumblr']    = 'Tumblr Username';
@@ -98,7 +98,7 @@ add_filter('user_contactmethods','eryn_contactmethods',10,1);
  */
 function eryn_widgets_init() {
     register_sidebar( array(
-		'name' => __( 'Pie 1', 'eryn' ),
+		'name' => __( 'Footer 1', 'eryn' ),
 		'id' => 'footer-1',
         'description'   => __( 'One of two widget areas that will apear at the bottom of the site.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
@@ -107,16 +107,16 @@ function eryn_widgets_init() {
 		'after_title' => '</h4>',
 	) );
     register_sidebar( array(
-		'name' => __( 'Pie 2', 'eryn' ),
+		'name' => __( 'Footer 2', 'eryn' ),
 		'id' => 'footer-2',
         'description'   => __( 'One of two widget areas that will apear at the bottom of the site.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
 		'after_widget' => '</div></aside>',
 		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
+		'after_title' => '</h4>',        
 	) );
     register_sidebar( array(
-		'name' => __( 'Panel Nav', 'eryn' ),
+		'name' => __( 'Navigation Panel', 'eryn' ),
 		'id' => 'nav-bar-1',
         'description'   => __( 'Widget area within the navigation panel that will display below the site primary menu.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
@@ -125,7 +125,7 @@ function eryn_widgets_init() {
 		'after_title' => '</h4>',
 	) );
     register_sidebar( array(
-		'name' => __( 'Panel Buscar', 'eryn' ),
+		'name' => __( 'Search Panel', 'eryn' ),
 		'id' => 'search-bar-1',
         'description'   => __( 'Widget area within the search panel that will display below the site search form.', 'eryn' ),
 		'before_widget' => '<aside id="%1$s" class="widget first %2$s"><div class="widget-wrap">',
@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'eryn_widgets_init' );
  * Enqueue scripts and styles.
  */
 function eryn_scripts() {
-
+	
 	// STYLESHEETS
     wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:600|Droid+Serif', '', '1.1');
 	wp_enqueue_style('eryn-style', get_stylesheet_uri(), '', '1.1');
@@ -183,11 +183,11 @@ include('functions/customizer_styles.php');
  * Exclude Featured Category
  */
 function eryn_category($separator) {
-
+	
 	if(get_theme_mod( 'eryn_featured_cat_hide' ) == true) {
-
+		
 		$excluded_cat = get_theme_mod('eryn_featured_cat');
-
+		
 		$first_time = 1;
 		foreach((get_the_category()) as $category) {
 			if ($category->cat_ID != $excluded_cat) {
@@ -199,9 +199,9 @@ function eryn_category($separator) {
 				}
 			}
 		}
-
+	
 	} else {
-
+		
 		$first_time = 1;
 		foreach((get_the_category()) as $category) {
 			if ($first_time == 1) {
@@ -211,7 +211,7 @@ function eryn_category($separator) {
 				echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "eryn" ), $category->name ) . '" ' . '>' . $category->name.'</a>';
 			}
 		}
-
+	
 	}
 }
 
@@ -237,14 +237,14 @@ add_filter( 'excerpt_more', 'eryn_new_excerpt_more' );
 /**
  * Title Tag Fallback
  */
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-function eryn_slug_render_title() {
-?>
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<?php
-}
-add_action( 'wp_head', 'eryn_slug_render_title' );
-endif;
+if ( ! function_exists( '_wp_render_title_tag' ) ) : 
+function eryn_slug_render_title() { 
+?> 
+<title><?php wp_title( '|', true, 'right' ); ?></title> 
+<?php 
+} 
+add_action( 'wp_head', 'eryn_slug_render_title' ); 
+endif; 
 /**
  * Include Google Fonts
  */
@@ -276,13 +276,13 @@ function eryn_google_fonts() {
         $url = add_query_arg('family', urlencode($fonts), "//fonts.googleapis.com/css" );
 
         wp_enqueue_style('eryn-google-fonts-'.urlencode($fonts), $url);
-
+            
             $enqueueFonts++;
 		}
 	}
     if($enqueueFonts == 0){
         return;
-    }
-
+    } 
+	
 }
 add_action('wp_enqueue_scripts', 'eryn_google_fonts');

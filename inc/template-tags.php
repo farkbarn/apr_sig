@@ -24,7 +24,7 @@ function eryn_paging_nav() {
 			<?php if ( get_next_posts_link() ) : ?>
 			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'eryn' ) ); ?></div>
 			<?php endif; ?>
-
+			
 			<?php if ( get_previous_posts_link() ) : ?>
 			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'eryn' ) ); ?></div>
 			<?php endif; ?>
@@ -51,22 +51,22 @@ function eryn_post_nav() {
 	<nav class="navigation post-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'eryn' ); ?></h1>
 		<div class="nav-links">
-        <?php
+        <?php 
 			$next_post = get_next_post();
 			$prev_post = get_previous_post();
-
+        
        	 	if (!empty( $prev_post )): ?>
             	<div class="nav-previous">
                 	<a href="<?php echo get_permalink( $prev_post->ID ); ?>">
                         <span class="meta-nav">&larr;</span>
-                        <?php _e('Anterior', 'eryn'); ?>
+                        <?php _e('Previous Post', 'eryn'); ?>
                     </a>
                 </div>
 			<?php endif; ?>
-
+			
 			<?php if (!empty( $next_post )): ?>
             	<div class="nav-next">
-					<a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php _e('Siguiente', 'eryn'); ?>
+					<a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php _e('Next Post', 'eryn'); ?>
                     	<span class="meta-nav">&rarr;</span>
                     </a>
                 </div>
