@@ -16,7 +16,7 @@
             <?php endif; ?>
 			<p><?php the_author_meta('description'); ?></p>
             <?php if(! is_author()): ?>
-                <p><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php _e('View all author posts', 'eryn'); ?>"><?php _e('View all author posts &rarr;', 'eryn'); ?></a></p>
+                <p><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php _e('Publicaciones de este autor', 'eryn'); ?>"><?php _e('View all author posts &rarr;', 'eryn'); ?></a></p>
             <?php endif; ?>
             <div class="author-sn">
                 <?php if(get_the_author_meta('facebook')) : ?><a target="_blank" class="hastip-author author-social" title="Facebook" href="http://facebook.com/<?php echo the_author_meta('facebook'); ?>"><i class="fa fa-facebook"></i></a><?php endif; ?>
