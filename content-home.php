@@ -1,5 +1,5 @@
 <?php echo 'esto';?>
-<article id="post-<?php the_ID(); ?>" <?php  post_class( 'masonry-entry'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'masonry-entry'); ?>>
     <div class="inner-post">
         <header class="entry-header">
             <h2 class="post-title">
@@ -14,9 +14,9 @@
                     </a>
                 <?php endif; ?>
                 <!-- // author -->
-                <?php  if(!get_theme_mod('eryn_homepage_hide_author')) : ?>
-                    <span class="author"><?php the_author_posts_link(); ?></span>
-                <?php endif; ?>
+                <?php // if(!get_theme_mod('eryn_homepage_hide_author')) : ?>
+                    <!-- <span class="author"><?php //the_author_posts_link(); ?></span>-->
+                <?php //endif; ?>
                 <!-- // Categories -->
                 <?php if(!get_theme_mod('eryn_homepage_hide_categories')) : ?>
                     <span class="cat-links">
@@ -24,11 +24,11 @@
                     </span>
                 <?php endif;?>
                 <!-- // Comment Count -->
-                <?php if(!get_theme_mod('eryn_homepage_hide_comment_count')) : ?>
-                    <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-                        <span class="comments-link"><?php comments_popup_link( __( '0 Comentarios', 'eryn' ), __( '1 Comentarios', 'eryn' ), __( '% Comentarios', 'eryn' ) ); ?></span>
-                    <?php endif; ?>
-                <?php endif; ?>
+                <?php // if(!get_theme_mod('eryn_homepage_hide_comment_count')) : ?>
+                    <?php //if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+                        <!-- <span class="comments-link"><?php //comments_popup_link( __( '0 Comentarios', 'eryn' ), __( '1 Comentarios', 'eryn' ), __( '% Comentarios', 'eryn' ) ); ?></span> -->
+                    <?php //endif; ?>
+                <?php //endif; ?>
                 <?php if(!get_theme_mod('eryn_homepage_hide_featured')): ?>
                     <?php if(is_sticky($post->ID)):?>
                         <span class="sticky-icon"><span class="sticky-text"><?php _e('Destacados', 'eryn'); ?> </span><i class="fa fa-thumb-tack"></i></span>
