@@ -1,5 +1,18 @@
 <?php
 
+if (1=1){
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+	<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-num-posts="10" data-width="100%"></div>
+}
+else {
+
 if ( post_password_required() ) {
 	return;
 }
@@ -55,3 +68,7 @@ if ( post_password_required() ) {
         <?php comment_form(); ?>
 	</div>
 </div><!-- #comments -->
+<?php
+}
+endif;
+?>
