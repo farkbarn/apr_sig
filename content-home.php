@@ -51,7 +51,7 @@
                             <div>
                                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
                                 if ($image) : ?>
-                                    <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Read More', 'eryn'); ?></span></a>
+                                    <a href="<?php the_permalink() ?>" class="overlay"><span><?php _e('Leer Más', 'eryn'); ?></span></a>
                                     <img src="<?php echo $image[0]; ?>" alt="" />
 
                                 <?php endif; ?>
@@ -69,7 +69,7 @@
             <?php
                 /* translators: %s: Name of current post */
                 the_content( sprintf(
-                    __( '<div class="read-more"> Continue reading... %s</div>', 'eryn' ),
+                    __( '<div class="read-more"> Contiguar Leyendo... %s</div>', 'eryn' ),
                     the_title( '<span class="screen-reader-text">"', '"</span>', false )
                 ) );
             ?>
