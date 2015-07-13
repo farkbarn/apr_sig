@@ -1092,6 +1092,7 @@ border-bottom: 1px solid #efefef;
     position: relative;
 }
 .post-image img{
+		border-radius: 15px;
     display: inline-block;
 }
 .post-image .overlay,
